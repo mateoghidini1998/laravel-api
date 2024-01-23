@@ -16,7 +16,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        return new CustomerCollection(Customer::all());  //->where('id', '>', 1);  //->get();  //->paginate(10);  //->toSql();
+        return new CustomerCollection(Customer::paginate());  //->where('id', '>', 1);  //->get();  //->paginate(10);  //->toSql();
     }
 
     /**
